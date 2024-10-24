@@ -2,20 +2,34 @@
 cd github_tips
 touch description.txt
 
-git remote add origin https://github.com/Jessie-Chen01/github_tips.git
-git add .
-git commit -m"description.txt"
-git push --set-upstream origin master
-git push
 
--If github website's file has been changed:
-terminal: 
--- git branch
-(if it's master)
---git pull origin master
+- Link local repository to GitHub:
+	git remote add origin https://github.com/Jessie-Chen01/github_tips.git
 
--If local file has been changed,
-in terminal: 
+-Add all changes:
+	git add .
+
+- Commit the changes:
+	git commit -m"description.txt"
+
+- Push and set upstream branch:
+	git push --set-upstream origin master
+
+- For future pushes:
+	git push
+
+
+* If GitHub website files have changed:
+
+- Check the current branch:
+	git branch
+
+- Pull the latest changes, if on master, 
+	git pull origin master
+
+
+* If local files have changed:
+
 -- git add .
 -- git commit -m"description.txt"
 -- git push
