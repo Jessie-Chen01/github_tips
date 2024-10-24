@@ -7,3 +7,10 @@ git add .
 git commit -m"description.txt"
 git push --set-upstream origin master
 git push
+
+-If github website's file has been changed:
+terminal: 
+-- git branch
+(if it's master)
+--git pull origin master
+
