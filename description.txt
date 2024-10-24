@@ -14,3 +14,10 @@ terminal:
 (if it's master)
 --git pull origin master
 
+-If local file has been changed,
+in terminal: 
+-- git add .
+-- git commit -m"description.txt"
+-- git push
+
+
