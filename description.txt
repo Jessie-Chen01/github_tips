@@ -1,1 +1,9 @@
-124
+
+cd github_tips
+touch description.txt
+
+git remote add origin https://github.com/Jessie-Chen01/github_tips.git
+git add .
+git commit -m"description.txt"
+git push --set-upstream origin master
+git push
