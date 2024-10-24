@@ -4,9 +4,34 @@
 
 <h2>What Can JavaScript Do?</h2>
 
+<!-- Paragraph with initial content -->
 <p id="demo">JavaScript can change HTML content.</p>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<!-- Button to toggle content -->
+<button type="button" id="toggleButton" onclick="toggleContent()">Click Me to Change Content!</button>
+
+<script>
+  // Define original and new text content
+  const originalText = "JavaScript can change HTML content.";
+  const newText = "Hello JavaScript!";
+
+  // Toggle function to switch content and button text
+  function toggleContent() {
+    const demoElement = document.getElementById("demo");
+    const buttonElement = document.getElementById("toggleButton");
+
+    // If the current content is the original text, switch to new text
+    if (demoElement.innerHTML === originalText) {
+      demoElement.innerHTML = newText;
+      buttonElement.innerHTML = "Now Click Me to Revert Content!";
+    } 
+    // Otherwise, switch back to the original text
+    else {
+      demoElement.innerHTML = originalText;
+      buttonElement.innerHTML = "Click Me to Change Content!";
+    }
+  }
+</script>
 
 </body>
 </html>
