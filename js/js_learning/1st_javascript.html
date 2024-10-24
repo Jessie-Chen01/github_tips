@@ -2,13 +2,42 @@
 <html>
 <body>
 
-<h2>Jessie's First JavaScript</h2>
+<h2>Jessie's 1st JavaScript</h2>
+<h3>Please enter your name, and the current date and time will be displayed.</h3>
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
 
-<p id="demo"></p>
+<!-- Input field for user to enter their name -->
+<label for="nameInput">Enter your name:</label>
+<input type="text" id="nameInput" placeholder="Enter your name">
+
+<!-- Button to confirm the name and update the other button's text -->
+<button type="button" onclick="updateButtonText()">Confirm Name</button>
+
+<!-- Line break to move the greeting to the next line -->
+<br><br>
+
+<!-- Button to display the current date and time -->
+<button type="button" id="nameButton" style="display:none;" onclick="showDate()">Hello! Click to display time</button>
+
+<!-- Paragraph to display the date and time -->
+<p id="timeDisplay"></p>
+
+<script>
+  // Function to update the button text with the user's name
+  function updateButtonText() {
+    const name = document.getElementById('nameInput').value;
+    if (name) {
+      const button = document.getElementById('nameButton');
+      button.innerHTML = `Hey, ${name}! Click to display current Date & Time`;
+      button.style.display = 'inline-block'; // Show the button
+    }
+  }
+
+  // Function to display the current date and time
+  function showDate() {
+    document.getElementById('timeDisplay').innerHTML = new Date();
+  }
+</script>
 
 </body>
-</html> 
+</html>
