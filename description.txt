@@ -26,6 +26,9 @@ touch description.txt
 
 - Pull the latest changes, if on master, 
 	git pull origin master
+- Pull the latest changes, if on main, 
+	git pull origin main
+
 
 
 * If local files have changed:
@@ -34,4 +37,9 @@ touch description.txt
 -- git commit -m"description.txt"
 -- git push
 
+** If github's file changed, but local files can't be updated:
+try: 
+- git branch
+- git pull origin master  or
+- git pull origin main
 
